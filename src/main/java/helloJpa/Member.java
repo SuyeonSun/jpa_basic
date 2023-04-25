@@ -1,13 +1,18 @@
 package helloJpa;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+// @Table(name = "Members") // Members라는 테이블에 셀행하라
 public class Member {
     @Id
     private Long id;
-    private String name;
+
+    // @Column(name = "userName") // userName이라는 컬럼에 매핑하라
+   private String name;
 
     public Long getId() {
         return id;
